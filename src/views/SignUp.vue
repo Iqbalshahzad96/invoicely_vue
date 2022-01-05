@@ -6,9 +6,16 @@
 
                 <form @submit.prevent="submitForm">
                     <div class="field">
+                        <label>Username</label>
+                        <div class="control">
+                            <input type="text" name="username" class="input" v-model="username">
+                        </div>
+                    </div>
+
+                    <div class="field">
                         <label>E-mail</label>
                         <div class="control">
-                            <input type="email" name="username" class="input" v-model="username">
+                            <input type="email" name="email" class="input" v-model="email">
                         </div>
                     </div>
 
@@ -49,6 +56,7 @@ export default {
     name: 'SignUp',
     data () {
         return {
+            email: '',
             username: '',
             password: '',
             errors: []
@@ -57,6 +65,7 @@ export default {
     methods: {
         submitForm(e) {
             const formData = {
+                email: this.email,
                 username: this.username,
                 password: this.password
             }

@@ -8,7 +8,7 @@
                     <div class="field">
                         <label>Username</label>
                         <div class="control">
-                            <input type="email" name="username" class="input" v-model="username">
+                            <input type="text" name="username" class="input" v-model="username">
                         </div>
                     </div>
 
